@@ -5,7 +5,7 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
 
-def main():
+def main(event, context):
     my_email_address = os.environ.get("EMAIL_ADDRESS")
     api_key = os.environ.get('SENDGRID_API_KEY')
 
@@ -16,4 +16,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(None, None)
